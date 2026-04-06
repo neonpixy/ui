@@ -1,0 +1,5 @@
+/* @omnidea/ui — Omnidea design system for UnoCSS.
+   Import this BEFORE UnoCSS in your app's CSS. */
+
+@import './theme.css';
+@import './utilities.css';

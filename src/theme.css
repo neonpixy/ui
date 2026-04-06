@@ -1,0 +1,73 @@
+/* @omnidea/ui — Auto-generated from defaults.json. Do not edit. */
+/* Run: npm run build to regenerate. */
+
+@theme {
+  /* Semantic colors (light) */
+  --color-primary: #000000;
+  --color-secondary: #8e8e93;
+  --color-accent: #cc03fb;
+  --color-background: #ffffff;
+  --color-surface: #fafafa;
+  --color-on-primary: #ffffff;
+  --color-on-background: #000000;
+  --color-danger: #ff3b30;
+  --color-success: #00dd4f;
+  --color-warning: #fb8205;
+  --color-info: #0aacfb;
+  --color-mid-gray: #efefef;
+
+  /* Spacing */
+  --spacing-xs: 6px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-display: 34px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-title: 28px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-headline: 22px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-body: 16px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-caption: 12px -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: 14px 'SF Mono', 'Fira Code', monospace;
+
+  /* Shadows */
+  --shadow-subtle: 0px 1px 2px rgba(0,0,0,0.08);
+  --shadow-medium: 0px 3px 6px rgba(0,0,0,0.12);
+  --shadow-elevated: 0px 6px 12px rgba(0,0,0,0.18);
+  --shadow-floating: 0px 12px 24px rgba(0,0,0,0.25);
+
+  /* Neumorphic */
+  --shadow-raised: 3px 3px 6px rgba(0,0,0,0.08), -3px -3px 6px rgba(255,255,255,0.8);
+  --shadow-pressed: inset 3px 3px 6px rgba(0,0,0,0.08), inset -3px -3px 6px rgba(255,255,255,0.8);
+  --shadow-flat: 0 1px 2px rgba(0,0,0,0.05);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #ffffff;
+    --color-secondary: #8e8e93;
+    --color-accent: #cc03fb;
+    --color-background: #000000;
+    --color-surface: #1c1c1e;
+    --color-on-primary: #000000;
+    --color-on-background: #ffffff;
+    --color-danger: #fb0301;
+    --color-success: #00dd4f;
+    --color-warning: #fb8201;
+    --color-info: #5ac8fa;
+    --color-mid-gray: #333333;
+    --shadow-raised: 3px 3px 6px rgba(0,0,0,0.08), -3px -3px 6px rgba(255,255,255,0.8);
+    --shadow-pressed: inset 3px 3px 6px rgba(0,0,0,0.08), inset -3px -3px 6px rgba(255,255,255,0.8);
+    --shadow-flat: 0 1px 2px rgba(0,0,0,0.05);
+  }
+}

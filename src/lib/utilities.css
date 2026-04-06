@@ -1,0 +1,237 @@
+/* @omnidea/ui — Custom utilities beyond UnoCSS defaults. */
+
+/* ── Neumorphic containers ──────────────────────────────────────── */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-on-background) 10%, transparent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-raised);
+  padding: var(--spacing-lg);
+}
+
+.card-sm {
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.card-flush {
+  padding: 0;
+}
+
+/* ── Flat buttons ───────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  min-height: 44px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid color-mix(in srgb, var(--color-on-background) 10%, transparent);
+  background: var(--color-surface);
+  color: var(--color-on-background);
+  transition: filter 0.15s, transform 0.1s;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.btn-danger {
+  background: var(--color-danger);
+  color: white;
+  border-color: var(--color-danger);
+}
+
+.btn-success {
+  background: var(--color-success);
+  color: white;
+  border-color: var(--color-success);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  min-height: 32px;
+  font-size: 12px;
+}
+
+.btn-lg {
+  padding: var(--spacing-md) var(--spacing-lg);
+  min-height: 52px;
+  font-size: 16px;
+}
+
+.btn-icon {
+  padding: var(--spacing-sm);
+  width: 44px;
+}
+
+.btn-pill {
+  border-radius: var(--radius-full);
+}
+
+/* ── Inputs ─────────────────────────────────────────────────────── */
+
+.input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  min-height: 44px;
+  background: var(--color-surface);
+  color: var(--color-on-background);
+  border: 1px solid color-mix(in srgb, var(--color-on-background) 10%, transparent);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pressed);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+/* ── Badges ─────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-on-background);
+}
+
+/* ── Loading ────────────────────────────────────────────────────── */
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-secondary);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Component styles (migrated from Svelte scoped <style>) ───── */
+
+.omnidea-spin {
+  animation: spin 0.8s linear infinite;
+}
+
+.omnidea-skeleton {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.checkbox-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  border: 2px solid color-mix(in srgb, var(--color-on-background) 30%, transparent);
+  background: var(--color-surface);
+  transition: background 0.15s ease, border-color 0.15s ease;
+  flex-shrink: 0;
+}
+.checkbox-box:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+.checkbox-box.checked,
+.checkbox-box.indeterminate {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.checkbox-box.glass {
+  background: color-mix(in srgb, var(--color-surface) 40%, transparent);
+  border-color: color-mix(in srgb, var(--color-on-background) 20%, transparent);
+}
+.checkbox-box.glass.checked,
+.checkbox-box.glass.indeterminate {
+  background: color-mix(in srgb, var(--color-accent) 60%, transparent);
+  border-color: color-mix(in srgb, var(--color-accent) 70%, transparent);
+}
+
+.toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  border: none;
+  background: color-mix(in srgb, var(--color-on-background) 20%, transparent);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  padding: 0;
+  flex-shrink: 0;
+}
+.toggle.checked { background: var(--color-accent); }
+.toggle.disabled { opacity: 0.5; cursor: not-allowed; }
+.toggle.glass {
+  background: color-mix(in srgb, var(--color-on-background) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-on-background) 15%, transparent);
+}
+.toggle.glass.checked {
+  background: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  border-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
+}
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.toggle.checked .toggle-thumb { transform: translateX(20px); }
+
+.toast-enter {
+  animation: toast-in 0.2s ease-out;
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-secondary); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
